@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Grid-fox Masonry</title>
+	<style>
+				* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-size: 0;
+			background-color: darkslategray;
+		}
+
+		h1 {
+			font-size: 30px;
+			color: floralwhite;
+			text-align: center;
+			line-height: 8vw;
+		}
+		section {
+		padding:0 100px ;
+			padding-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 10px;
+    grid-auto-rows: 300px;
+    grid-auto-flow: dense;
+		justify-content: space-between;
+
+}
+
+		div{
+		background-size: cover;
+			background-position: center;
+		}
+
+
+div:nth-child(3n){
+     grid-column: span 2;
+	grid-row: span 2;
+}
+
+/*
+
+div:nth-child(2) {
+    grid-column: span 3;
+    grid-row: span 4;
+}
+*/
+
+		@media (max-width:850px) {
+			section {
+				padding: 0 5vw 1vw 5vw;
+			}
+			div:nth-child(3n){
+				  grid-column: span 1;
+	grid-row: span 1;
+			}
+			div:nth-child(4n){
+				  grid-column: span 2;
+	grid-row: span 2;
+			}
+		
+	</style>
+</head>
+<body>
+		<h1>Grid-fox Masonry</h1>
+	<section>
+		<div style="background-image: url(img/item-1.jpg);"></div>
+		<div style="background-image: url(img/item-2.jpg);"></div>
+		<div style="background-image: url(img/item-3.jpg);"></div>
+		<div style="background-image: url(img/item-4.jpg);"></div>
+		<div style="background-image: url(img/item-5.jpg);"></div>
+		<div style="background-image: url(img/item-6.jpg);"></div>
+		<div style="background-image: url(img/item-7.jpg);"></div>
+		<div style="background-image: url(img/item-8.jpg);"></div>
+		<div style="background-image: url(img/item-9.jpg);"></div>
+<!--		<div style="background-image: url(img/ibonus.jpg);"></div>-->
+
+	</section>
+</body>
+</html>
